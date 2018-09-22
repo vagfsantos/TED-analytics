@@ -3,7 +3,7 @@ if(module.hot) {
   module.hot.accept()
 }
 
-
+import './styles/main.scss';
 import './app.js';
 
 console.log(`Environment: ${ENV}`);

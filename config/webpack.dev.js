@@ -86,13 +86,20 @@ const devConfig = env => ({
             loader: 'style-loader'
           },
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1
+            },
           },
           {
             loader: 'postcss-loader'
           },
           {
-            loader: 'sass-loader'
+            loader: 'sass-loader',
+            options: {
+             includePaths: ["src/styles/config"]
+           }
           }
         ]
       },

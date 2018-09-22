@@ -1,12 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import './styles/app.scss'
+import './app.scss'
+import ted from './images/ted.png'
 
 ReactDOM.render(
   <div>
     <h1>TED <small>analytics</small></h1>
-    <img src="./images/ted.png" alt="TED" />
+    {  
+      // TODO: <img src="./images/ted.png" alt="TED" />
+    }
+    <img src={ted} alt="TED" />
   </div>,
   document.querySelector('#app')
 )
