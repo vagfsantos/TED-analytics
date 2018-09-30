@@ -1,6 +1,9 @@
 const path = require("path")
 const webpack = require("webpack")
 const htmlWebpackPlugin = require("html-webpack-plugin")
+const globalVariables = require('./globalVariables')
+const babelConfig = require('./babel-config')
+const stylusConfig = require('./stylus-config')
 
 const devConfig = env => ({
   entry: {
@@ -22,87 +25,8 @@ const devConfig = env => ({
   },
   module: {
     rules: [
-      {
-        test: /\.js/,
-        use: [
-          {
-            loader: 'babel-loader'
-          }
-        ],
-        exclude: /node_modules/
-      },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'postcss-loader'
-          }
-        ]
-      },
-      {
-        test: /\.sass$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'postcss-loader'
-          },
-          {
-            loader: 'sass-loader'
-          }
-        ]
-      },
-      {
-        test: /\.styl$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'postcss-loader'
-          },
-          {
-            loader: 'stylus-loader'
-          }
-        ]
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              importLoaders: 1
-            },
-          },
-          {
-            loader: 'postcss-loader'
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-             includePaths: ["src/styles/config"]
-           }
-          }
-        ]
-      },
+      babelConfig,
+      stylusConfig,
       {
         test: /\.html$/,
         use: [
@@ -130,13 +54,10 @@ const devConfig = env => ({
   plugins: [
     new htmlWebpackPlugin({
       template: './src/index.ejs',
-      title: 'Test'
+      title: 'TED Analytics'
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      'ENV': JSON.stringify(process.env.ENV),
-      'APP_NAME': JSON.stringify(process.env.APP_NAME)
-    })
+    globalVariables
   ]
 })
 
