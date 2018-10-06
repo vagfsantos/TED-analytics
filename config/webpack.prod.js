@@ -4,6 +4,7 @@ const miniCSSExtractPlugin = require('mini-css-extract-plugin')
 const optimizeCSSAssets = require('optimize-css-assets-webpack-plugin')
 const compressionPlugin = require('compression-webpack-plugin')
 const globalVariables = require('./globalVariables')
+const globalVendors = require('./globalVendors')
 const babelConfig = require('./babel-config')
 const stylusConfig = require('./stylus-config')
 
@@ -56,6 +57,7 @@ const prodConfig = env => ({
       filename: '[name]-bundle-[hash:8].css'
     }),
     globalVariables,
+    globalVendors,
     new compressionPlugin({
       algorithm: 'gzip'
     })

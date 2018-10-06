@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
+// Components
 import Header from '../Header'
-
-import ted from '../../images/ted.png'
+import Sidebar from '../Sidebar'
+import Display from '../Display'
 
 class App extends React.Component {
 
@@ -11,11 +12,13 @@ class App extends React.Component {
     return (
       <>
         <Header />
+        <Sidebar />
+        <Display />
       </>
     )
   }
 }
-ReactDOM.render(
+render(
   <App />,
   document.querySelector('#app')
 )
