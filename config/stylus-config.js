@@ -15,19 +15,6 @@ module.exports = {
       },
     },
     'postcss-loader',
-    { 
-      loader: 'stylus-loader', 
-      // options: {
-        // 'include css': true,
-        // preferPathResolver: 'webpack',
-        // import: [
-          // '../styles/config/variables.styl',
-          // '/var/www/html/TED-analytics/src/styles/config/variables.styl'
-          // path.resolve(__dirname, '../styles/config/variables.styl')
-          // path.resolve(__dirname)
-        // ],
-        // paths: ['../styles/config/variables.styl']
-      // }
-    }
+    'stylus-loader'    
   ]
 }
