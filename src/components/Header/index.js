@@ -6,8 +6,8 @@ const Header = () => (
   <header className={styles.header}>
     <div className={styles.wrapper}>
       <h1>
-        <strong>TED</strong>
-        <span>analytics</span>  
+        <span className={styles.projectFirstName}>TED</span>
+        <span className={styles.projectLastName}>analytics</span>  
       </h1>
     </div>
   </header>
