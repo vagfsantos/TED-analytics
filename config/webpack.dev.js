@@ -23,7 +23,6 @@ const devConfig = env => ({
     contentBase: 'dist',
     hot: true,
     overlay: false,
-    // historyApiFallback: true
   },
   module: {
     rules: [

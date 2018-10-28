@@ -1,0 +1,9 @@
+above(measure, dimension = false)
+  if dimenstion == 'h'
+    @media screen and (min-height: measure)
+      & 
+        { block }
+  else
+    @media screen and (min-width: measure)
+      & 
+        { block }
