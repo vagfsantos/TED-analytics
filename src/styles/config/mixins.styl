@@ -1,5 +1,5 @@
-above(measure, dimension = false)
-  if dimenstion == 'h'
+above_screen(measure, dimension = false)
+  if dimenstion == 'height'
     @media screen and (min-height: measure)
       & 
         { block }
@@ -7,3 +7,6 @@ above(measure, dimension = false)
     @media screen and (min-width: measure)
       & 
         { block }
+
+get(object, property)
+  return object[property]
