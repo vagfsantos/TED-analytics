@@ -1,7 +1,3 @@
-@require('../../styles/config/variables')
-@require('../../styles/config/mixins')
-@require('../../styles/config/app-wrapper.styl')
-
 .header
   display flex
   align-items center
@@ -11,20 +7,20 @@
   font-family $mainFont
   font-size 3rem
 
-.projectFirstName
-  font-size 2.9rem
-  font-weight 900
+  .project-firstName
+    font-size 2.9rem
+    font-weight 900
 
-.projectLastName
-  position relative
-  top -0.5rem
-  margin-left 0.3rem
-  color get($colors, 'grayLight')
-  font-family $secondaryFont
-  font-size 2.3rem
-  font-weight 400
+  .project-lastName
+    position relative
+    top -0.5rem
+    margin-left 0.3rem
+    color get($colors, 'grayLight')
+    font-family $secondaryFont
+    font-size 2.3rem
+    font-weight 400
 
-.wrapper
-  +above_screen(1024px)
-    width 100%
-    padding 0 3rem
+  .wrapper
+    +above_screen(1024px)
+      width 100%
+      padding 0 3rem

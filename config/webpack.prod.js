@@ -10,7 +10,6 @@ const stylusConfig = require('./stylus-config')
 
 const prodConfig = env => ({
   entry: {
-    // main: ["./src/main.js"]
     main: ["@babel/polyfill", "./src/main.js"]
   },
   mode: "production",

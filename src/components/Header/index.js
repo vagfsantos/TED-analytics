@@ -1,13 +1,12 @@
-import React from 'react'
-
-import styles from './header.styl'
+// Styles
+import './header.styl'
 
 const Header = () => (
-  <header className={styles.header}>
-    <div className={styles.wrapper}>
+  <header className='header'>
+    <div className='wrapper'>
       <h1>
-        <span className={styles.projectFirstName}>TED</span>
-        <span className={styles.projectLastName}>analytics</span>  
+        <span className='project-firstName'>TED</span>
+        <span className='project-lastName'>analytics</span>  
       </h1>
     </div>
   </header>
