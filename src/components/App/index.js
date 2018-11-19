@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 
+// Components
 import Header from '../Header'
-
-import ted from '../../images/ted.png'
 
 class App extends React.Component {
 
@@ -15,7 +13,7 @@ class App extends React.Component {
     )
   }
 }
-ReactDOM.render(
+render(
   <App />,
   document.querySelector('#app')
 )

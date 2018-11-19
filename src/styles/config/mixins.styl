@@ -1,0 +1,12 @@
+above_screen(measure, dimension = false)
+  if dimenstion == 'height'
+    @media screen and (min-height: measure)
+      & 
+        { block }
+  else
+    @media screen and (min-width: measure)
+      & 
+        { block }
+
+get(object, property)
+  return object[property]

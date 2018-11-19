@@ -9,12 +9,18 @@ module.exports = {
     {
       loader: 'css-loader',
       options: {
-        modules: true,
-        localIdentName: '[name]__[hash:base64:8]',
         importLoaders: 1
       },
     },
     'postcss-loader',
-    'stylus-loader'    
+    { 
+      loader: 'stylus-loader', 
+      options: {
+        import: [
+          path.resolve(__dirname, '../src/styles/config/variables.styl'),
+          path.resolve(__dirname, '../src/styles/config/mixins.styl')
+        ]
+      }
+    }
   ]
 }

@@ -1,6 +1,26 @@
-@require('../../styles/config/variables')
-
 .header
-  color red
-  font-family $secondaryFont
+  display flex
+  align-items center
+  padding 1.3rem
+  background-color get($colors, 'blue')
+  color get($colors, 'white')
+  font-family $mainFont
   font-size 3rem
+
+  .project-firstName
+    font-size 2.9rem
+    font-weight 900
+
+  .project-lastName
+    position relative
+    top -0.5rem
+    margin-left 0.3rem
+    color get($colors, 'grayLight')
+    font-family $secondaryFont
+    font-size 2.3rem
+    font-weight 400
+
+  .wrapper
+    +above_screen(1024px)
+      width 100%
+      padding 0 3rem

@@ -2,6 +2,7 @@ const path = require("path")
 const webpack = require("webpack")
 const htmlWebpackPlugin = require("html-webpack-plugin")
 const globalVariables = require('./globalVariables')
+const globalVendors = require('./globalVendors')
 const babelConfig = require('./babel-config')
 const stylusConfig = require('./stylus-config')
 
@@ -21,7 +22,7 @@ const devConfig = env => ({
   devServer : {
     contentBase: 'dist',
     hot: true,
-    overlay: false
+    overlay: false,
   },
   module: {
     rules: [
@@ -57,7 +58,8 @@ const devConfig = env => ({
       title: 'TED Analytics'
     }),
     new webpack.HotModuleReplacementPlugin(),
-    globalVariables
+    globalVariables,
+    globalVendors
   ]
 })
 
